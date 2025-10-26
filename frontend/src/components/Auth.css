@@ -1,0 +1,131 @@
+/* Container for the form */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* Form box */
+.auth-form {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Headings */
+.auth-form h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Inputs, password, and select dropdowns */
+.auth-form input,
+.password-wrapper input,
+.auth-form select {
+  padding: 12px 15px;
+  margin-bottom: 10px; /* uniform smaller gap */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  appearance: none; /* remove default select arrow styling */
+}
+
+.auth-form input:focus,
+.password-wrapper input:focus,
+.auth-form select:focus {
+  outline: none;
+  border-color: #74ebd5;
+  box-shadow: 0 0 5px rgba(116, 235, 213, 0.5);
+}
+
+/* Password wrapper with toggle */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* same gap as others */
+}
+
+.password-wrapper input {
+  flex: 1;
+  margin-bottom: 0; /* override extra margin */
+}
+
+.password-wrapper .toggle {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #74ebd5;
+  user-select: none;
+}
+
+/* Button */
+.auth-form button {
+  padding: 12px;
+  background: #74ebd5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  margin-top: 15px; /* spacing above button */
+}
+
+.auth-form button:hover {
+  background: #4ac4b8;
+}
+
+/* Paragraph and links */
+.auth-form p {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+}
+
+.auth-form a {
+  color: #74ebd5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .auth-form {
+    padding: 30px 20px;
+  }
+  .auth-form input,
+  .password-wrapper input,
+  .auth-form select {
+    font-size: 14px;
+  }
+  .auth-form button {
+    font-size: 14px;
+  }
+}
